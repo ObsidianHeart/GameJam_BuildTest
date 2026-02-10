@@ -6,10 +6,37 @@
     <title>Unity Web Player | Game Jam WorkShop</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+<style>
+        /* Force the body to be full screen with no scrollbars */
+        body { 
+            padding: 0; 
+            margin: 0; 
+            overflow: hidden; 
+            background: #000; 
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Force the container to fit the screen */
+        #unity-container { 
+            width: 100% !important; 
+            height: 100% !important; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+        }
+        
+        /* Force the canvas to fill the container */
+        #unity-canvas { 
+            width: 100% !important; 
+            height: 100% !important; 
+            background: #231F20; 
+        }
+    </style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=100% height=100% tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
